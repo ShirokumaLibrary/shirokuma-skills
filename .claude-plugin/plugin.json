@@ -1,0 +1,24 @@
+{
+  "name": "shirokuma-skills",
+  "description": "Reusable AI skills and rules for Claude Code following Agent Skills standard",
+  "version": "0.1.0",
+  "author": {
+    "name": "ShirokumaLibrary"
+  },
+  "homepage": "https://github.com/ShirokumaLibrary/shirokuma-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShirokumaLibrary/shirokuma-skills.git"
+  },
+  "keywords": [
+    "claude-code",
+    "skills",
+    "rules",
+    "nextjs",
+    "typescript",
+    "code-review",
+    "frontend",
+    "agent-skills"
+  ],
+  "license": "MIT"
+}
