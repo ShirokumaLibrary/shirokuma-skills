@@ -1,0 +1,12 @@
+# shirokuma-docs configuration for shirokuma-skills
+
+project:
+  name: "shirokuma-skills"
+  description: "Reusable AI skills and rules for Claude Code"
+  version: "0.1.0"
+  repository: "https://github.com/ShirokumaDevelopment/shirokuma-skills"
+
+output:
+  dir: ./docs
+  portal: ./docs/portal
+  generated: ./docs/generated

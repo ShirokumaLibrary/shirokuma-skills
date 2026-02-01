@@ -2,6 +2,7 @@
 
 Reusable AI skills and rules for Claude Code and 25+ AI tools following the [Agent Skills](https://agentskills.io) open standard.
 
+
 ## Prerequisites
 
 Most skills in this collection require **[shirokuma-docs CLI](https://github.com/ShirokumaLibrary/shirokuma-docs)** for GitHub operations (Issues, Discussions, Projects) and code linting.
@@ -10,7 +11,7 @@ Most skills in this collection require **[shirokuma-docs CLI](https://github.com
 npm i -g @shirokuma-library/shirokuma-docs
 ```
 
-Skills that work **without** shirokuma-docs: `managing-agents`, `managing-skills`, `managing-plugins`, `managing-output-styles`, `managing-rules`, `show-dashboard`, `show-handovers`, `show-specs`, `create-spec`, `add-issue-comment`, `manage-labels`
+Skills that work **without** shirokuma-docs: `managing-agents`, `managing-skills`, `managing-plugins`, `managing-output-styles`, `managing-rules`, `managing-github-items` (partial: comments, labels)
 
 ## Installation
 
@@ -34,23 +35,19 @@ shirokuma-docs init --with-skills --with-rules --lang ja
 
 ```
 shirokuma-skills/
-├── skills/                           # Agent Skills (24 skills)
+├── skills/                           # Agent Skills (16 skills)
 │   ├── managing-*/                   # Meta skills (agents, skills, plugins, output-styles, rules)
 │   ├── nextjs-vibe-coding/           # TDD implementation for Next.js
 │   ├── code-reviewing/               # Code review with specialized roles
 │   ├── frontend-designing/           # Memorable UI design
 │   ├── codebase-rule-discovery/      # Pattern analysis for conventions
 │   ├── project-config-generator/     # Project-specific config generation
-│   ├── session-management/           # Session start/end with GitHub
 │   ├── github-project-setup/         # GitHub Project initialization
 │   ├── publishing/                   # Public repo release workflow
-│   ├── start-session/                # Session start
-│   ├── end-session/                  # Session end with handover
-│   ├── show-*/                       # Dashboard and display skills
-│   ├── create-item/                  # Project item creation
-│   ├── create-spec/                  # Spec discussion creation
-│   ├── add-issue-comment/            # Issue/PR commenting
-│   └── manage-labels/                # Label management
+│   ├── starting-session/             # Session start with context display
+│   ├── ending-session/               # Session end with handover save
+│   ├── showing-github/               # Dashboard, items, issues, handovers, specs
+│   └── managing-github-items/        # Create items/specs, comments, labels
 ├── rules/                            # Claude Code rules (12 rules)
 │   ├── skill-authoring.md            # Skill creation guidelines
 │   ├── output-destinations.md        # Output destination conventions
@@ -111,33 +108,15 @@ This repository follows the Agent Skills standard, compatible with:
 | `project-config-generator` | Generate project-specific configuration for skills |
 | `publishing` | Manage public releases via shirokuma-docs repo-pairs CLI |
 
-### Session Management Skills
-
-| Skill | Description |
-|-------|-------------|
-| `session-management` | GitHub-integrated session management |
-| `start-session` | Start session showing project status and previous handovers |
-| `end-session` | End session saving handover info and updating project items |
-
-### GitHub Operation Skills
+### Session & GitHub Skills
 
 | Skill | Description |
 |-------|-------------|
 | `github-project-setup` | Automate GitHub Project setup with Status, Priority, Type, Size fields |
-| `create-item` | Create project items (Issues or DraftIssues) |
-| `create-spec` | Create spec Discussions for design documents |
-| `add-issue-comment` | Add comments to Issues/PRs |
-| `manage-labels` | Manage Issue/PR labels |
-
-### Display Skills
-
-| Skill | Description |
-|-------|-------------|
-| `show-dashboard` | Project dashboard aggregating GitHub data |
-| `show-handovers` | Display past handover information |
-| `show-issues` | List GitHub Issues with filtering |
-| `show-project-items` | Display GitHub Project items with Status filter |
-| `show-specs` | List spec Discussions |
+| `starting-session` | Start session showing project status and previous handovers |
+| `ending-session` | End session saving handover info and updating project items |
+| `showing-github` | Display dashboard, project items, issues, handovers, and specs |
+| `managing-github-items` | Create items/specs, add comments, manage labels |
 
 ## Rules
 
